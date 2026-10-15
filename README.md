@@ -208,3 +208,7 @@ the crap myself instead of letting it do it all for me, I want to learn ts, not 
 As a final note, I'm sorry I just suck. and kinda had to use ai (smal amount). sorry bros.
 
 I really wish I didn't have to use any AI, I hate it. But at the same time I depend on it too much.
+
+Anyway this project is gonna hopefully make Wii Modding easier, that was my goal, instead of having to write a million lines of code to get a triangle, I abstracted it to make it easier, or so I hope. 
+
+My goal is to reignite the Wii modding community, and to make a Custom game store called Wii Forge, this is my first step toward that.. See ya soon.

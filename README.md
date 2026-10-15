@@ -3,14 +3,12 @@ Simply Wii Mod is a High level wrapper for GX and Wii Video initilization. I rea
 
 
 
-
+# Finished Product
 The Finished version is meant to include simplified coding of the most of the <GCCORE> libary, I'm still new at C++ so this is gonna take me a while (:<
-
-
 
 The goal is to be able to write something like this:
 
-
+<sub>
 #include <simplywiimod/base.h>
 #include <simplywiimod/gx.h>
 #include <simplywiimod/input.h>
@@ -32,10 +30,11 @@ int main()
 
     SWM.Shutdown();
 }
-
+ </sub>
+ 
 Instead of this.  ):
 
-
+<sub>
 // adapted from	the	original acube demo	by tkcne.
 
 // enjoy
@@ -180,7 +179,7 @@ static void	copy_buffers(u32 count __attribute__ ((unused)))
 
 
 
-
+ </sub>
 
 
 

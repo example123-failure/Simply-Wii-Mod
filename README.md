@@ -1,14 +1,26 @@
 # Simply-Wii-Mod
-Simply Wii Mod is a High level wrapper for GX and Wii Video initilization. I really just was annoyed at the amount of settings/code i had to do, so I automated it--while still providing access to low level control.                  AS OF 10/15/2026 THIS IS NOT FINISHED
 
+Simply Wii Mod is a High level wrapper for GX and Wii Video initilization. I really just was annoyed at the amount of settings/code i had to do, so I automated it--while still providing access to low level control.
 
+> **AS OF 10/15/2026 THIS IS NOT FINISHED**
 
-# Finished Product
-The Finished version is meant to include simplified coding of the most of the <GCCORE> libary, I'm still new at C++ so this is gonna take me a while (:<
+---
+
+## Table of Contents
+
+- [Finished Product](#finished-product)
+- [Artificial Intelligence Disclaimer](#artificial-intelligence-disclaimer)
+  - [a small note on AI](#a-small-note-on-ai)
+
+---
+
+## Finished Product
+
+The Finished version is meant to include simplified coding of the most of the `<GCCORE>` libary, I'm still new at C++ so this is gonna take me a while (:<
 
 The goal is to be able to write something like this:
 
-<sub>
+```cpp
 #include <simplywiimod/base.h>
 #include <simplywiimod/gx.h>
 #include <simplywiimod/input.h>
@@ -30,11 +42,11 @@ int main()
 
     SWM.Shutdown();
 }
- </sub>
- 
+```
+
 Instead of this.  ):
 
-<sub>
+```cpp
 // adapted from	the	original acube demo	by tkcne.
 
 // enjoy
@@ -115,7 +127,7 @@ int	main(void) {
 	GX_SetVtxDesc(GX_VA_POS, GX_INDEX8);
 	GX_SetVtxDesc(GX_VA_CLR0, GX_INDEX8);
 	GX_SetVtxAttrFmt(GX_VTXFMT0, GX_VA_POS,	GX_POS_XYZ,	GX_S16,	0);
-	GX_SetVtxAttrFmt(GX_VTXFMT0, GX_VA_CLR0, GX_CLR_RGBA, GX_RGBA8,	0);
+	GX_SetVtxAttrFmt(GX_VTXFMT0, GX_VA_CLR0, GX_RGBA, GX_RGBA8,	0);
 	GX_SetArray(GX_VA_POS, vertices, 3*sizeof(s16));
 	GX_SetArray(GX_VA_CLR0,	colors,	4*sizeof(u8));
 	GX_SetNumChans(1);
@@ -175,31 +187,24 @@ static void	copy_buffers(u32 count __attribute__ ((unused)))
 		readyForCopy = GX_FALSE;
 	}
 }
+```
 
+---
 
-
-
- </sub>
-
-
-
-
-
-Artificial Intelligence Disclaimer:
+## Artificial Intelligence Disclaimer
 
 Some Artificial Intelligence was used in this project for the following purposes:
 
-Debugging (WITHOUT EDITING)
-Structure ideas (like how it should be structured)
+- Debugging (WITHOUT EDITING)
+- Structure ideas (like how it should be structured)
 
-a small note on AI:
+### a small note on AI:
 
-(Summary) a small amount of AI was used in this project, but not for directly editing it, only for LEARNING purposes. Read more below.
+**(Summary)** a small amount of AI was used in this project, but not for directly editing it, only for LEARNING purposes. Read more below.
 
 I personally have a generally negative option on AI, and sometimes feel guilty when using it, however, I try to at least code
-the crap myself instead of letting it do it all for me, I want to learn ts, not have AI do it for me. I'm sorry to those who decide not to use this because they heard AI was used in it at all. I'm from Python, Unity C#, and learning C++ wasn't too different than C#, but I do apologize for any small code sections, I try to make sure AI has the least amount of work in my project, but as a standard for this project, I never let AI directly edit it, while using it, I did type out what it did say (rarely), BUT!! I would argue that Typing it out myself is really more than just copying and pasting it, (a quick note, most sections used the little amount of tutorials from this website: http://www.codemii.com/category/wii-programming-tutorials/) I used AI for certain parts because of the little amount of documentation on GX, and Wii modding coding. And hey techincally I wrote it myself because I WASN'T copy and pasting, it's almost like a tutorial but personalized. 
+the crap myself instead of letting it do it all for me, I want to learn ts, not have AI do it for me. I'm sorry to those who decide not to use this because they heard AI was used in it at all. I'm from Python, Unity C#, and learning C++ wasn't too different than C#, but I do apologize for any small code sections, I try to make sure AI has the least amount of work in my project, but as a standard for this project, I never let AI directly edit it, while using it, I did type out what it did say (rarely), BUT!! I would argue that Typing it out myself is really more than just copying and pasting it, (a quick note, most sections used the little amount of tutorials from this website: http://www.codemii.com/category/wii-programming-tutorials/) I used AI for certain parts because of the little amount of documentation on GX, and Wii modding coding. And hey techincally I wrote it myself because I WASN'T copy and pasting, it's almost like a tutorial but personalized.
 
 As a final note, I'm sorry I just suck. and kinda had to use ai (smal amount). sorry bros.
 
-I really wish I didn't have to use any AI, I hate it. But at the same time I depend on it too much.   
-
+I really wish I didn't have to use any AI, I hate it. But at the same time I depend on it too much.

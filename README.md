@@ -18,6 +18,51 @@ Simply Wii Mod is a High level wrapper for GX and Wii Video initilization. I rea
 
 The Finished version is meant to include simplified coding of the most of the `<GCCORE>` libary, I'm still new at C++ so this is gonna take me a while (:<
 
+### CONSOLE MODE NOW WORKS!
+You can now make a Console app for Wii Homebrew as easily as the printf function.
+This abstracts the low level Wii hardware functions into a useable libary that isn't distracting at all! 
+While still providing access to low level functions.
+
+OK, so far you can now write and compile this code into a valid .dol file! 
+
+```cpp
+#include "../include/base.h"
+#include <gccore.h>
+#include <stdio.h>
+
+int main()
+{
+	SWM_Config config;
+	config.EnableConsole = true;
+	config.EnableGX = false;
+	config.UseDoubleBuffering = false;
+
+
+	if (!SWM_Init(config))
+	{
+		return 1;
+	}
+
+	if (SWM_GetState() != SWM_State::ConsoleReady)
+	{
+		return 2;
+	}
+
+
+	printf("Simply Wii Mod is working!\n");
+
+	while (true)
+	{
+		VIDEO_WaitVSync();
+	}
+	return 0;
+}
+```
+
+
+GX is my next target, so that 3D rendering and 2D rendering become easier.
+Then later I will make input easier, and possibly Audio and stuff when I need it.
+
 The goal is to be able to write something like this:
 
 ```cpp
@@ -46,6 +91,8 @@ int main()
 
 Instead of this.  ):
 
+
+this is from the devKitPro example: triangle.c         waayyyy toooo lonng..   it might just be me, because I used python but.. :P
 ```cpp
 // adapted from	the	original acube demo	by tkcne.
 
